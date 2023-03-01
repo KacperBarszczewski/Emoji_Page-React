@@ -1,1 +1,0 @@
-import { TranslatorScreen } from "./TranslatorScreen";

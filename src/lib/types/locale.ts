@@ -1,3 +1,11 @@
 export type Dictionary = {
-    appName: string
+    auth: string,
+    components: {
+        header: {
+            title: string,
+        },
+        footer: {
+            emojiApi: string,
+        }
+    }
 }

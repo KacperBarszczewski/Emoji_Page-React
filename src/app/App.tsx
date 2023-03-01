@@ -1,19 +1,14 @@
-import { useEffect, useState } from 'react'
-import { TranslatorScreen } from '../features/translator/TranslatorScreen';
-import useColorMode from '../lib/hooks/useColorMode'
+import { EmojiScreen } from '../features/emoji';
+import { Footer, Header } from '../lib/components';
 
-export function App() {
-
-  const [colorMode, setColorMode] = useColorMode();
+export const App = () => {
 
 
   return (
-    <div className='w-screen h-screen bg-background text-typography dark:bg-background-dark dark:text-typography-dark  '>
-      <TranslatorScreen />
-      {/* <button className='bg-foreground'
-        onClick={() => setColorMode(colorMode === 'light' ? 'dark' : 'light')}>
-        Change color
-      </button> */}
+    <div className='w-screen h-screen flex flex-col justify-between bg-background text-typography dark:bg-background-dark dark:text-typography-dark  '>
+      <Header />
+      <EmojiScreen/>
+      <Footer />
     </div>
   )
 }
