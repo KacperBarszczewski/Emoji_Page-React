@@ -5,8 +5,8 @@ import { Emoji } from "../../lib/models";
 export const useEmojis = (
     onSucces: (emojis: Array<Emoji>) => void
 ) => {
-    const [isLoading, setLoading] = useState(false);
-    const [hasError, setHasError] = useState(false);
+    const [isLoading, setLoading] = useState<boolean>(false);
+    const [hasError, setHasError] = useState<boolean>(false);
 
     return {
         isLoading,

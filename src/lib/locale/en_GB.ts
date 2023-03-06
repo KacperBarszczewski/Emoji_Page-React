@@ -8,6 +8,16 @@ export const en_GB: Dictionary = {
         },
         footer: {
             emojiApi: 'Emoji Api',
+        },
+        message: {
+            tryAgain: 'Try again',
+        }
+    },
+    screen: {
+        emoji: {
+            loading: 'Loading...',
+            error: 'Something went wrong',
+            empty: 'No emoji',
         }
     }
 }
