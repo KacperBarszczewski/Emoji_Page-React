@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Loader, Message } from "../../lib/components";
+import { EmojiCard, Loader, Message } from "../../lib/components";
 import { useTranslations } from "../../lib/hooks"
 import { Emoji } from "../../lib/models";
 import { useEmojis } from "./useEmojis";
@@ -56,8 +56,12 @@ export const EmojiScreen = () => {
     }
 
     return (
-        <div className="flex-1">
-            nic
+        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2">
+            {emojis.map((emoji, i) => (
+                <EmojiCard key={i} emojiDetails={emoji} />
+            ))}
+
         </div>
+
     )
 }

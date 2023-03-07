@@ -5,7 +5,7 @@ export const App = () => {
 
 
   return (
-    <div className='w-full h-full min-h-screen flex flex-col justify-between bg-background text-typography dark:bg-background-dark dark:text-typography-dark  '>
+    <div className='min-h-screen flex flex-col justify-between bg-background text-typography dark:bg-background-dark dark:text-typography-dark  '>
       <Header />
       <EmojiScreen />
       <Footer />
