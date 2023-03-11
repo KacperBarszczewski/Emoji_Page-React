@@ -54,12 +54,16 @@ export const EmojiScreen = () => {
             </div>
         )
     }
+    
 
     return (
-        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2">
-            {emojis.map((emoji, i) => (
-                <EmojiCard key={i} emojiDetails={emoji} />
-            ))}
+        <div className="flex-1 flex  justify-center">
+            <div className="flex flex-wrap w-2/3 justify-center">
+                {emojis.map((emoji, i) => (
+                    <EmojiCard key={i} emojiDetails={emoji} />
+                ))}
+            </div>
+
 
         </div>
 
