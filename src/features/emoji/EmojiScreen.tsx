@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
+
+import { emojiActions } from ".";
 import { EmojiCard, Loader, Message } from "../../lib/components";
 import { useTranslations } from "../../lib/hooks"
 import { Emoji } from "../../lib/models";
-import { useEmojis } from "./useEmojis";
+
 
 export const EmojiScreen = () => {
 
     const T = useTranslations();
     const [emojis, setEmojis] = useState<Array<Emoji>>([]);
-    const { isLoading, hasError, fetch: getEmojis } = useEmojis(
-        setEmojis
-    );
+    const { isLoading, hasError, fetch: getEmojis } = emojiActions.useEmojis(setEmojis);
 
     let ignore = false;
 
@@ -54,7 +54,7 @@ export const EmojiScreen = () => {
             </div>
         )
     }
-    
+
 
     return (
         <div className="flex-1 flex  justify-center">
