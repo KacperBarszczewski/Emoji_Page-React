@@ -23,6 +23,18 @@ export type Dictionary = {
             loading: string,
             error: string,
             empty: string,
+        },
+        categories: {
+            Categories: string,
+            All: string,
+            Activities: string,
+            AnimalsNature: string,
+            Flags: string,
+            FoodDrink: string,
+            Objects: string,
+            SmileysPeople: string,
+            Symbols: string,
+            TravelPlaces: string,
         }
     }
 }

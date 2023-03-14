@@ -4,14 +4,16 @@ import { emojiActions } from ".";
 import { EmojiCard, Loader, Message } from "../../lib/components";
 import { useTranslations } from "../../lib/hooks"
 import { Emoji } from "../../lib/models";
-import { HttpMethod } from "../../lib/types";
+import { HttpMethod, UrlCategories } from "../../lib/types";
 
+type Props = {
+    category: UrlCategories
+}
 
-export const EmojiScreen = () => {
-
+export const EmojiScreen = ({ category }: Props) => {
     const T = useTranslations();
     const [emojis, setEmojis] = useState<Array<Emoji>>([]);
-    const { isLoading, hasError, fetch: getEmojis } = emojiActions.useEmojis(setEmojis);
+    const { isLoading, hasError, fetch: getEmojis } = emojiActions.useEmojis(setEmojis, category);
 
     let ignore = false;
 
@@ -22,11 +24,12 @@ export const EmojiScreen = () => {
         return () => {
             ignore = true
         }
-    }, [])
+    }, [category])
+
 
     if (isLoading) {
         return (
-            <div className="self-center">
+            <div className="flex-1 flex items-center justify-center">
                 <Loader>
                     <div>
                         {T.screen.emoji.loading}
@@ -38,7 +41,7 @@ export const EmojiScreen = () => {
 
     if (hasError) {
         return (
-            <div className="self-center">
+            <div className="flex-1 flex items-center justify-center">
                 <Message
                     withButton
                     message={T.screen.emoji.error}
@@ -50,7 +53,7 @@ export const EmojiScreen = () => {
 
     if (emojis.length === 0) {
         return (
-            <div className="self-center">
+            <div className="flex-1 flex items-center justify-center">
                 <Message message={T.screen.emoji.empty} />
             </div>
         )

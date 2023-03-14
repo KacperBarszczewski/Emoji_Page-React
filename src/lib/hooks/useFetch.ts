@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { APP_CONFIG } from "../config";
-import { HttpMethod, OnError, OnSucces } from "../types"
+import { HttpMethod, OnError, OnSucces, UrlCategories } from "../types"
 
 type FetchProps = {
-    url: string,
+    url: UrlCategories,
     method: HttpMethod
 }
 

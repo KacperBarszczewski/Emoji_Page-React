@@ -25,6 +25,18 @@ export const en_GB: Dictionary = {
             loading: 'Loading...',
             error: 'Something went wrong',
             empty: 'No emoji',
+        },
+        categories: {
+            Categories: 'Categories',
+            All: 'All',
+            Activities: 'Activities',
+            AnimalsNature: 'Animals and Nature',
+            Flags: 'Flags',
+            FoodDrink: 'Food and Drink',
+            Objects: 'Objects',
+            SmileysPeople: 'Smileys and People',
+            Symbols: 'Symbols',
+            TravelPlaces: 'Travel and Places',
         }
     }
 }
