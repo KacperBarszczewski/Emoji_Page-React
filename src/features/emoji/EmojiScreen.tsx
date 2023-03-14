@@ -4,6 +4,7 @@ import { emojiActions } from ".";
 import { EmojiCard, Loader, Message } from "../../lib/components";
 import { useTranslations } from "../../lib/hooks"
 import { Emoji } from "../../lib/models";
+import { HttpMethod } from "../../lib/types";
 
 
 export const EmojiScreen = () => {
@@ -58,14 +59,11 @@ export const EmojiScreen = () => {
 
     return (
         <div className="flex-1 flex  justify-center">
-            <div className="flex flex-wrap w-2/3 justify-center">
+            <div className=" my-3 flex flex-wrap w-2/3 justify-center gap-3">
                 {emojis.map((emoji, i) => (
                     <EmojiCard key={i} emojiDetails={emoji} />
                 ))}
             </div>
-
-
         </div>
-
     )
 }
