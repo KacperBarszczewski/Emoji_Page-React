@@ -11,6 +11,13 @@ export const en_GB: Dictionary = {
         },
         message: {
             tryAgain: 'Try again',
+        },
+        emojiCard: {
+            name: 'Name',
+            category: 'Category',
+            group: 'Group',
+            htmlCode: 'HtmlCode',
+            unicode: 'Unicode'
         }
     },
     screen: {

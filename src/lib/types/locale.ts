@@ -9,6 +9,13 @@ export type Dictionary = {
         },
         message: {
             tryAgain: string,
+        },
+        emojiCard: {
+            name: string,
+            category: string,
+            group: string,
+            htmlCode: string,
+            unicode: string
         }
     },
     screen: {
